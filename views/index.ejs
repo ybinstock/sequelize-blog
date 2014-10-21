@@ -1,5 +1,7 @@
 <% include partials/header %>
 
+
+
 <div class="pure-g adjust">
     <div class="pure-u-1-5"></div>
     <div class="pure-u-3-5"><p>
@@ -7,7 +9,7 @@
   <% allPosts.forEach(function(post,index){ %>
   <h2><a href="posts/<%=post.id %>"><%= post.title %></a></h2>
   <br><%=post.body %><br>
-  <small>by ~<a href="/authors/<%= post.AuthorId%>">authorname</a> on <%=post.createdAt %></small>
+  <small>by ~<a href="/authors/<%= post.AuthorId%>"><%=post.Author.name  %></a> on <%=post.createdAt %></small>
   <br>
   <br>
   <br>

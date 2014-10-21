@@ -14,7 +14,8 @@ app.use(express.static(__dirname + '/public'));
 
 //Index
 app.get('/', function(req, res){
-  db.Post.findAll().done(function(err,posts){
+  db.Post.findAll({include: [db.Author]}).done(function(err,posts){
+    console.log(JSON.stringify(posts));
     res.render('index', {allPosts: posts});
   });
 });
