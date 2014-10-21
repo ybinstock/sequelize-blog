@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show a Post</title>
+</head>
+<body>
+
+  <a href="/">Home</a>
+  <a href="/authors/">Our Team</a>
+  <a href="/posts/new">Add a new post</a>
+  <a href="/authors/new">Add a new author</a>
+<h1><%= post.title%></h1>
+
+<p><%= post.body%></p>
+
+  <a href="/posts/<%= post.id %>/edit">Edit</a>
+
+  <form action="/posts/<%= post.id %>?_method=delete" method="post">
+    <input type="submit" value="Destroy">
+  </form>
+
+
+</body>
+</html>

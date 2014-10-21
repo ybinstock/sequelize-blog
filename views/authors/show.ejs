@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Show a Post</title>
+</head>
+<body>
+
+  <a href="/">Home</a>
+  <a href="/authors/">Our Team</a>
+  <a href="/posts/new">Add a new post</a>
+  <a href="/authors/new">Add a new author</a>
+<h1>Author Bio</h1>
+
+  <p> Name: <%= author.name%><br>
+        Bio: <%= author.bio%>
+  </p>
+
+  <h2>stories</h2>
+
+  <% allPosts.forEach(function(post,index){ %>
+  <h2><a href="posts/<%=post.id %>"><%= post.title %></a></h2>
+  by <a href="/authors/<%= post.AuthorId%>">author</a> on <%=post.createdAt %>
+  <br><%=post.body %>
+  <br>
+  <br>
+  <% }); %>
+
+  <a href="/authors/<%= author.id %>/edit">Edit</a>
+<form action="/authors/<%= author.id %>?_method=delete" method="post">
+    <input type="submit" value="Delete this author">
+  </form>
+
+
+
+
+
+
+</body>
+</html>

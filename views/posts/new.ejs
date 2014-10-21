@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post New</title>
+</head>
+<body>
+
+  <a href="/">Home</a>
+  <a href="/authors/">Our Team</a>
+  <a href="/posts/new">Add a new post</a>
+  <a href="/authors/new">Add a new author</a>
+<h1>New Post</h1>
+
+  <form action="/posts" method="post">
+    <p>
+    <label for="name">Title</label>
+      <input type="text" name="post[title]" id="title" autofocus>
+    </p>
+    <p>
+      <label for="body">Body:</label>
+      <input type="text" name="post[body]" id="body">
+    </p>
+    <p> by:<br>
+    <% allAuthors.forEach(function(author,index){ %>
+      <input type="radio" name="post[AuthorId]" id="AuthorId" value="<%=author.id %>"> <%= author.name %><br>
+    <% }); %></p>
+
+    <input type="submit" value="Save">
+  </form>
+
+</body>
+</html>

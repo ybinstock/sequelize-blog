@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Author</title>
+</head>
+<body>
+
+  <a href="/">Home</a>
+  <a href="/authors/">Our Team</a>
+  <a href="/posts/new">Add a new post</a>
+  <a href="/authors/new">Add a new author</a>
+<h1>New Author</h1>
+
+
+  <form action="/authors" method="post">
+    <p>
+    <label for="name">Name</label>
+      <input type="text" name="author[name]" id="name" autofocus>
+    </p>
+    <p>
+      <label for="body">Bio:</label>
+      <input type="text" name="author[bio]" id="bio">
+    </p>
+
+    <input type="submit" value="Save">
+  </form>
+
+</body>
+</html>

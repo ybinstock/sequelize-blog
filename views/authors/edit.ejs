@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  <a href="/">Home</a>
+  <a href="/authors/">Our Team</a>
+  <a href="/posts/new">Add a new post</a>
+  <a href="/authors/new">Add a new author</a>
+<h1>Edit Authors</h1>
+
+  <form action="/authors/<%= author.id %>?_method=put" method="post">
+    <input name="author[name]" value="<%= author.name %>" autofocus>
+    <input name="author[bio]" value="<%= author.bio %>">
+    <input type="submit" value="Save">
+  </form>
+
+</body>
+</html>

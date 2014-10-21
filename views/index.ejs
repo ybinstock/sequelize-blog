@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modest Proposals</title>
+</head>
+<body>
+
+  <a href="/">Home</a>
+  <a href="/authors/">Our Team</a>
+  <a href="/posts/new">Add a new post</a>
+  <a href="/authors/new">Add a new author</a>
+<h1>Modest Proposals</h1>
+
+  <% allPosts.forEach(function(post,index){ %>
+  <h2><a href="posts/<%=post.id %>"><%= post.title %></a></h2>
+  by <a href="/authors/<%= post.AuthorId%>">author</a> on <%=post.createdAt %>
+  <br><%=post.body %>
+  <br>
+  <br>
+  <% }); %>
+
+</body>
+</html>
