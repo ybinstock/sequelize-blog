@@ -1,24 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Modest Proposals</title>
-</head>
-<body>
+<% include partials/header %>
 
-  <a href="/">Home</a>
-  <a href="/authors/">Our Team</a>
-  <a href="/posts/new">Add a new post</a>
-  <a href="/authors/new">Add a new author</a>
-<h1>Modest Proposals</h1>
+<div class="pure-g adjust">
+    <div class="pure-u-1-5"></div>
+    <div class="pure-u-3-5"><p>
 
   <% allPosts.forEach(function(post,index){ %>
   <h2><a href="posts/<%=post.id %>"><%= post.title %></a></h2>
-  by <a href="/authors/<%= post.AuthorId%>">author</a> on <%=post.createdAt %>
-  <br><%=post.body %>
+  <br><%=post.body %><br>
+  <small>by ~<a href="/authors/<%= post.AuthorId%>">authorname</a> on <%=post.createdAt %></small>
+  <br>
   <br>
   <br>
   <% }); %>
 
-</body>
-</html>
+    </p></div>
+    <div class="pure-u-1-5"></div>
+
+</div>
+
+<% include partials/footer %>

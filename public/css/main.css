@@ -1,0 +1,70 @@
+@import url('http://yui.yahooapis.com/pure/0.5.0/pure-min.css;');
+
+html{
+  letter-spacing: 1px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
+  }
+
+body{
+  background: #F7F7F7;
+}
+
+h1{
+  display: block;
+}
+
+img{
+  height: 300px;
+  width:300px;
+  display: block;
+}
+
+input{
+  height: 40px;
+  widows: 300px;
+  font-weight: 200;
+}
+
+ /* unvisited link */
+  a:link  {
+      text-decoration: none;
+  }
+
+  /* visited link */
+  a:visited {
+      text-decoration: none;
+  }
+
+  /* mouse over link */
+  a:hover {
+      text-decoration: none;
+  }
+
+  /* selected link */
+  a:active {
+      text-decoration: none;
+  }
+
+
+.adjust{
+  padding-left: 20px;
+  padding-top: 100px;
+}
+
+
+
+
+.footer{
+  letter-spacing: .2px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 25;
+  margin-left: 50%;
+  margin-top: 20px;
+  color: #6681B2;
+}
+
+
+.result{
+  background-color: grey;
+}

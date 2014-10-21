@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Show a Post</title>
-</head>
-<body>
+<% include ../partials/header %>
 
-  <a href="/">Home</a>
-  <a href="/authors/">Our Team</a>
-  <a href="/posts/new">Add a new post</a>
-  <a href="/authors/new">Add a new author</a>
+<div class="pure-g adjust">
+    <div class="pure-u-1-5"></div>
+    <div class="pure-u-3-5"><p>
+
 <h1><%= post.title%></h1>
 
 <p><%= post.body%></p>
@@ -20,6 +14,4 @@
     <input type="submit" value="Destroy">
   </form>
 
-
-</body>
-</html>
+<% include ../partials/footer %>

@@ -1,23 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>our authors</title>
-</head>
-<body>
+<% include ../partials/header %>
 
-  <a href="/">Home</a>
-  <a href="/authors/">Our Team</a>
-  <a href="/posts/new">Add a new post</a>
-  <a href="/authors/new">Add a new author</a>
-<h1>Our Authors</h1>
+<div class="pure-g adjust">
+    <div class="pure-u-1-5"></div>
+    <div class="pure-u-3-5"><p>
+
 
 
   <% allAuthors.forEach(function(author,index){ %>
-  <h3><a href="/authors/<%=author.id %>"><%= author.name %></a></h3>
-    <%=author.bio %>
+  <h1><a href="/authors/<%=author.id %>"><%= author.name %></a></h1>
+    <%=author.bio %><a href="/authors/<%= author.id %>/edit">Edit</a>
   <br>
-    <a href="/authors/<%= author.id %>/edit">Edit</a>
+  <br>
 
   <form action="/authors/<%= author.id %>?_method=delete" method="post">
     <input type="submit" value="Delete this author">
@@ -26,7 +19,9 @@
   <% }); %>
 
 
+    </p></div>
+    <div class="pure-u-1-5"></div>
 
+</div>
 
-</body>
-</html>
+<% include ../partials/footer %>
